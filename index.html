@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ankit Yadav | Data Analyst Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papbduM5YwM0OdrmUYZn1u7ycVOuDAZ3VCsGnKZkV9z/50g0Ijr03ExI9x/9rYGyN+/4vE/9Kpp2jMmcqSe7qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <!-- NAVBAR -->
@@ -14,28 +16,80 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="toggle-btn">
+        <i class="fas fa-moon"></i>
+      </div>
     </div>
   </nav>
 
   <!-- HOME -->
   <section id="home" class="section home-section">
+    <img src="assets/profile.jpg" alt="Ankit Yadav" class="profile-pic" />
     <h1>Hi, I'm Ankit Yadav</h1>
     <p>Data Analyst | BSc Economics & Analytics</p>
+    <a href="assets/resume.pdf" download class="btn">Download Resume</a>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
     <h2>About Me</h2>
     <p>
-      I'm a Data Analyst with experience in building dashboards, analyzing
-      large datasets, and driving insights for business decisions. I specialize
-      in tools like Python, Power BI, SQL, and Excel. I’ve worked on real-time
-      manufacturing analytics and market research projects.
+      Data Analyst with experience in building real-time dashboards, working with large datasets (60L+ rows), and delivering insights that improve KPIs. Proficient in Python, Power BI, SQL, and statistical modeling. Known for analytical thinking, teamwork, and problem-solving with NCC leadership experience.
     </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <div class="edu-entry">
+      <h3>CHRIST University, Pune, Lavasa</h3>
+      <p>BSc in Economics & Analytics (2022–2025)</p>
+    </div>
+    <div class="edu-entry">
+      <h3>GEMS International School, Gurgaon</h3>
+      <p>Senior Secondary (2020–2022)</p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="exp-entry">
+      <h3>Data Analyst Intern – Future Algorithms Pvt. Ltd. (Jan 2025 – Apr 2025)</h3>
+      <ul>
+        <li>Analyzed data from 100+ OEMs; built 60L+ row datasets in SQL Server</li>
+        <li>Developed real-time Power BI dashboards to track KPIs & machine uptime</li>
+        <li>Improved refresh rate using DirectQuery and optimized SQL queries</li>
+      </ul>
+    </div>
+    <div class="exp-entry">
+      <h3>Marketing Analyst Intern – Quba Architectural Products (Jun 2024 – Jul 2024)</h3>
+      <ul>
+        <li>Conducted SWOT and market segmentation, boosting engagement by 15%</li>
+        <li>Used Python to analyze customer feedback and sales trends</li>
+      </ul>
+    </div>
+    <div class="exp-entry">
+      <h3>Data Science Intern – Prodigy InfoTech (Feb 2024 – Mar 2024)</h3>
+      <ul>
+        <li>Analyzed traffic safety data and delivered actionable recommendations</li>
+        <li>Worked with Python and R to visualize and clean datasets</li>
+      </ul>
+    </div>
+    <div class="exp-entry">
+      <h3>Market Analyst Intern – Future Algorithms Pvt. Ltd. (Jul 2023 – Aug 2023)</h3>
+      <ul>
+        <li>Researched customer behavior and competition for market forecasts</li>
+        <li>Managed large datasets using SQL</li>
+      </ul>
+    </div>
   </section>
 
   <!-- SKILLS -->
@@ -59,20 +113,34 @@
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
-        <h3>Real-Time SPC Dashboard</h3>
-        <p>Power BI + SQL Server | Monitors 100+ OEMs' KPIs in automotive manufacturing.</p>
+        <h3>Manufacturing Analytics Dashboard</h3>
+        <p>Used Power BI + SQL to monitor KPIs & machine performance in real time.</p>
       </div>
       <div class="project-card">
-        <h3>Market Analysis Automation</h3>
-        <p>Python + Pandas | Analyzes customer behavior and competitor positioning.</p>
+        <h3>Traffic Safety Data Analysis</h3>
+        <p>Analyzed public datasets to identify accident trends using Python & SQL.</p>
+      </div>
+      <div class="project-card">
+        <h3>Sole-Shopper Console App</h3>
+        <p>Python + MySQL shoe shopping app with cart, UPI, and sales analytics.</p>
       </div>
     </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="section">
+    <h2>Certificates</h2>
+    <ul>
+      <li>Accenture North America – Data Analytics & Visualization (Forage)</li>
+      <li>Enhancing Soft Skills & Personality (NPTEL)</li>
+      <li>Big Data Computing (NPTEL)</li>
+    </ul>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>Email: ankityadav1600@gmail.com</p>
+    <p>Email: <a href="mailto:ankityadav1600@gmail.com">ankityadav1600@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/Ankit160009" target="_blank">Ankit160009</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/ankit-1600-yadav" target="_blank">ankit-1600-yadav</a></p>
   </section>

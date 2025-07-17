@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +7,10 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
+  background: #ffffff;
   color: #333;
   line-height: 1.6;
-  scroll-behavior: smooth;
+  transition: background 0.3s, color 0.3s;
 }
 
 .section {
@@ -20,14 +20,24 @@ body {
 
 h1, h2, h3 {
   color: #222;
+  margin-bottom: 20px;
 }
 
-/* Navbar Styles */
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
@@ -39,39 +49,76 @@ h1, h2, h3 {
   flex-wrap: wrap;
 }
 
-.nav-container h2 {
-  font-size: 1.5rem;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .nav-links li a {
-  text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #007acc;
+  color: teal;
 }
 
-/* Home Section */
+/* Dark mode toggle */
+.toggle-btn {
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+}
+
+.toggle-btn:hover {
+  color: teal;
+}
+
+/* Home */
 .home-section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  background: #f5f5f5;
 }
 
-/* Skills List */
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: teal;
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #006d6d;
+}
+
+/* Experience & Education */
+.edu-entry, .exp-entry {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  text-align: left;
+}
+
+.exp-entry ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* Skills */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -81,14 +128,14 @@ h1, h2, h3 {
 }
 
 .skills-list li {
-  background: #fff;
+  background: #e7f6f6;
   padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
   font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
-/* Projects Grid */
+/* Projects */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -103,24 +150,55 @@ h1, h2, h3 {
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
 }
 
 .project-card h3 {
-  margin-bottom: 10px;
-  color: #007acc;
+  color: teal;
 }
 
-/* Contact Links */
-#contact a {
-  color: #007acc;
-  text-decoration: none;
+/* Dark Mode Styles */
+body.dark {
+  background: #121212;
+  color: #e4e4e4;
 }
 
-#contact a:hover {
-  text-decoration: underline;
+body.dark .navbar,
+body.dark .home-section {
+  background: #1e1e1e;
 }
 
-/* Responsive Tweaks */
+body.dark .nav-links li a {
+  color: #e4e4e4;
+}
+
+body.dark .nav-links li a:hover {
+  color: #00bfbf;
+}
+
+body.dark .toggle-btn {
+  color: #ccc;
+}
+
+body.dark .btn {
+  background: #00bfbf;
+}
+
+body.dark .btn:hover {
+  background: #00a3a3;
+}
+
+body.dark .skills-list li,
+body.dark .project-card {
+  background: #2b2b2b;
+  color: #eee;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -134,11 +212,11 @@ h1, h2, h3 {
     padding-top: 10px;
   }
 
-  .nav-container h2 {
-    margin-bottom: 10px;
+  .profile-pic {
+    width: 120px;
   }
 
-  .project-card {
-    text-align: center;
+  .exp-entry, .edu-entry {
+    padding: 0 10px;
   }
 }
